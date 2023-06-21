@@ -1,0 +1,274 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    display: grid;
+    font-family: 'Noto Serif', serif;
+    min-height: 100vh;
+    grid-template: "header header header"
+        "space main space2"
+        "space main space2"
+        "footer footer footer";
+    grid-template-rows: auto 1fr 1fr auto;
+    grid-template-columns: 1fr 60% 1fr;
+}
+
+header {
+    background-color: #458A79;
+    grid-area: header;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+header nav .nav-list {
+    display: flex;
+    align-items: center;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    min-width: 300px;
+    justify-content: space-between;
+}
+
+header nav ul li a {
+    color: #A8DB92;
+    text-decoration: none;
+    padding: 10px;
+}
+
+header nav ul li a:hover,
+.selected {
+    background-color: #6FA698;
+}
+
+header nav h1 {
+    font-size: 2em;
+    color: #A8DB92;
+}
+
+main {
+    padding-top: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    grid-area: main;
+    /* background-color: #f4f4f4; */
+}
+
+footer {
+    margin-top: 100px;
+    text-align: center;
+    background-color: #4E9231;
+    color: white;
+    grid-area: footer;
+}
+
+section {
+    margin-top: 50px;
+}
+
+section p {
+    text-align: justify;
+}
+
+.title h1 {
+    margin: 0px;
+}
+
+.greeting,
+.popular {
+    padding-bottom: 100px;
+}
+
+.greeting,
+.popular-article {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-text {
+    width: 47%;
+}
+
+.section-img,
+.popular-img {
+    width: 47%;
+    height: 500px;
+    background-position: bottom;
+    background-size: cover;
+    background-image: url(../assets/img/flowers1.jpg);
+    margin: 10px;
+}
+
+.date {
+    margin: 0;
+    color: #A8DB92;
+}
+
+.popular {
+    padding-bottom: 100px;
+}
+
+.popular h2 {
+    text-align: center;
+}
+
+.popular .section-text h2 {
+    text-align: left;
+}
+
+.popular .popular-img {
+    background-position: top;
+}
+
+.popular-article:nth-child(2) .popular-img {
+    background-image: url(../assets/img/popular1.jpg);
+}
+
+.popular-article:nth-child(3) .popular-img {
+    background-image: url(../assets/img/popular2.jpeg);
+}
+
+.popular-article:nth-child(4) .popular-img {
+    background-image: url(../assets/img/popular3.jpeg);
+    background-position: bottom;
+}
+
+section h2 {
+    font-size: 1.5em;
+    color: #6FA698;
+    margin: 0;
+    display: block;
+}
+
+section p {
+    font-size: 1em;
+    text-align: justify;
+}
+
+.reference a {
+    color: #4E9231;
+    text-decoration: none;
+}
+
+.reference a:hover {
+    text-decoration: underline;
+}
+
+.form-suscription {
+    text-align: center;
+}
+
+.form-suscription h2 {
+    font-size: 1.5em;
+    color: #6FA698;
+}
+
+.form-suscription .button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4E9231;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-suscription input[type="text"] {
+    min-width: 500px;
+    margin: 0 auto;
+    display: block;
+    border: none;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-suscription .button:hover {
+    background-color: #A8DB92;
+    color: #4E9231;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container h2 {
+    font-size: 1.5em;
+    color: #6FA698;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.form-group button {
+    padding: 10px 20px;
+    background-color: #4E9231;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-group button:hover {
+    background-color: #4E9231;
+}
+
+@media screen and (max-width:1250px) {
+    .greeting {
+        display: block;
+    }
+
+    .greeting .section-text,
+    .popular-article .section-text {
+        width: auto;
+    }
+
+    .greeting .section-img,
+    .popular-article .popular-img {
+        width: auto;
+    }
+
+    .popular-article {
+        display: block;
+    }
+}
+
+@media screen and (max-width:900px) {
+    body {
+
+        grid-template: "header header header"
+            "main main main"
+            "main main main"
+            "footer footer footer";
+    }
+}

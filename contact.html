@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4b670180fd.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Floreteca</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="title">
+                <h1>Floreteca</h1>
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li><a href="./index.html" target="_self">
+                        Inicio
+                        <i class="fa-solid fa-house"></i>
+                    </a></li>
+                    <li><a href="./suscription.html" target="_self">
+                        Suscribete
+                        <i class="fa-solid fa-envelope"></i>
+                    </a></li>
+                    <li><a href="./contact.html" target="_self" class="selected">
+                        Contacto
+                        <i class="fa-solid fa-address-book"></i>
+                    </a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h2>Contacto</h2>
+            <form action="#" method="post">
+              <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+              </div>
+              <div class="form-group">
+                <button type="submit">Enviar</button>
+              </div>
+            </form>
+          </div>
+    </main>
+    <footer>
+        <p class="leyenda">2023 &copy; Floreteca</p>
+    </footer>
+</body>
